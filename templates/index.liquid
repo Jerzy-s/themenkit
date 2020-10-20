@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="text-center">
+        <p>This is how we assign variable</p>
+       {% assign array_string = "Bob,Bjorn,Sting,Hey"  %}
+       {% assign array = array_string | split: ","%}
+      
+      {% assign collection = all_products['products'] %}
+      {{ collection.title }}
+      <ul>
+      {% for product in collection.products %}
+          <a href="{{ product.url }}"><li>{{ product.title }} - {{product.price}}</li></a>
+      {% endfor %}
+      </ul>
+    </div>
+</div>
